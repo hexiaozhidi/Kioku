@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Kioku</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="/stylesheets/landing.css">
+		<link href="https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c:400,700&display=swap&subset=japanese" rel="stylesheet">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" type="text/javascript" async></script>
+    </head>
+    <body>
+		<div class="container">
+			<% if (error && error.length > 0){ %>
+				<div class="alert alert-danger" role="alert">
+					<%= error %>
+				</div>
+			<% } %>
+			<% if (success && success.length > 0){ %>
+				<div class="alert alert-success" role="alert">
+					<%= success %>
+				</div>
+			<% } %>
+		</div>
+
+		<div id="landing-header">
+			<div class="my-5 kioku">
+				<h1><i class="fas fa-leaf"></i> K i o k u</h1>
+				<h2>記 憶</h2>
+			</div>
+			
+			<div class="my-5">
+				<a href="/campgrounds" class="btn btn-lg btn-success">View All Memories</a>
+				<p>
+					<form action="/campgrounds" method="GET" class="form-inline" id="campground-search">
+						<div class="search-bar mx-auto">
+							<input type="text" name="search" placeholder="Memory search..." class="form-control">
+							<input type="submit" value="Search" class="btn btn-primary">
+						</div>
+					</form>
+				</p>
+			</div>
+
+			<div id="sub-title" class="kioku">
+				<h3>The return trip was supposed to make you feel lonely.</h3>
+				<h3>帰路は孤独なものになるはずだった。<h3>
+			</div>
+		</div>
+
+		<ul class="slideshow">
+		  <li></li>
+		  <li></li>
+		  <li></li>
+		  <li></li>
+		  <li></li>
+		</ul>
+
+		<footer id="landing-footer" class="footer">
+			<div class="container">
+				<p class="text-light">&copy; Kioku 2021 | <a class="text-light" href="/campgrounds">Home</a> | <a class="text-light" href="/campgrounds/new">New Memory</a></p>
+			</div>
+		</footer>
+		<!-- Bootstrap and its dependencies -->
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+		<script src="https://kit.fontawesome.com/74416b6e35.js"></script>
+	</body>
+</html>
